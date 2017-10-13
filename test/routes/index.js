@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -7,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/home', function(req, res, next) {
-    console.log(req.session.user);
+    //console.log(req.session.user);
   if(req.session.user==undefined){
     res.redirect('/');
   }else{
