@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>管理页面</title>
+    <link rel="stylesheet" type="text/css" href="/javascripts/jquery-easyui-1.5.3/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/javascripts/jquery-easyui-1.5.3/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="/javascripts/jquery-easyui-1.5.3/themes/color.css">
+    <link rel="stylesheet" type="text/css" href="/javascripts/jquery-easyui-1.5.3/demo/demo.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        #header{
+
+            padding: 0 20px;
+            /* Firefox 3.6+ */
+            background: #5f66cc;
+            color:#eee;
+        }
+        h1{
+            display: inline-block;
+            font: 800 40px/80px "";
+            padding: 0;
+            margin: 0;
+            float:left;
+        }
+        .headerContent{
+            float:right;
+            font: 18px/100px "";
+        }
+    </style>
+    <script type="text/javascript" src="/javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/jquery-easyui-1.5.3/jquery.easyui.min.js"></script>
+</head>
+<body class="easyui-layout">
+    <div id="header" data-options="region:'north'" style="height:80px;">
+        <h1>新闻管理系统</h1>
+        <div class="headerContent">
+            您好，<%- user %> &emsp;
+            <a href="/logout">注销</a>
+        </div>
+
+
+
+    </div>
+
+    <div data-options="region:'south'" style="height:60px;text-align: center;
+            line-height: 60px;">&copy;&emsp;SethVoler作品</div>
+
+    <div data-options="region:'west',title:'West'" style="width:100px;"></div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+</body>
+</html>

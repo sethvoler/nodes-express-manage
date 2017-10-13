@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+
+	<title>Basic Layout - jQuery EasyUI Demo</title>
+	<link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="../../themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="../demo.css">
+	<script type="text/javascript" src="../../jquery.min.js"></script>
+	<script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="./jquery.serializejson.min.js"></script>
+</head>
+<body>
+	<div class="easyui-layout" data-options="fit:true">
+		<div data-options="region:'north'" style="height:50px">
+			<div style="float:left">logo</div>
+			<div style="float:right">
+
+				<!-- 下拉菜单 -->
+				<div class="easyui-panel" style="padding:5px;width:400px;" data-options="border:false">
+				    <a href="#" class="easyui-linkbutton" data-options="plain:true">Home</a>
+				    <a href="#" class="easyui-splitbutton" data-options="menu:'#mm1',iconCls:'icon-edit'">Edit</a>
+				    <a href="#" class="easyui-splitbutton" data-options="menu:'#mm2',iconCls:'icon-ok'">Ok</a>
+				    <a href="#" class="easyui-menubutton" data-options="menu:'#mm3',iconCls:'icon-help'">Help</a>
+				</div>
+				<div id="mm1" style="width:150px;">
+				    <div data-options="iconCls:'icon-undo'">Undo</div>
+				    <div data-options="iconCls:'icon-redo'">Redo</div>
+				    <div class="menu-sep"></div>
+				    <div>Cut</div>
+				    <div>Copy</div>
+				    <div>Paste</div>
+				    <div class="menu-sep"></div>
+				    <div>
+				        <span>Toolbar</span>
+				        <div>
+				            <div>Address</div>
+				            <div>Link</div>
+				            <div>Navigation Toolbar</div>
+				            <div>Bookmark Toolbar</div>
+				            <div class="menu-sep"></div>
+				            <div>New Toolbar...</div>
+				        </div>
+				    </div>
+				    <div data-options="iconCls:'icon-remove'">Delete</div>
+				    <div>Select All</div>
+				</div>
+				<div id="mm2" style="width:100px;">
+				    <div data-options="iconCls:'icon-ok'">Ok</div>
+				    <div data-options="iconCls:'icon-cancel'">Cancel</div>
+				</div>
+				<div id="mm3" style="width:150px;">
+				    <div>Help</div>
+				    <div>Update</div>
+				    <div>
+				        <span>About</span>
+				        <div class="menu-content" style="padding:10px;text-align:left">
+				            <img src="http://www.jeasyui.com/images/logo1.png" style="width:150px;height:50px">
+				            <p style="font-size:14px;color:#444">Try jQuery EasyUI to build your modern, interactive, javascript applications.</p>
+				        </div>
+				    </div>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+		<div data-options="region:'south',split:true" style="height:50px;"></div>
+		<div data-options="region:'west',split:true" title="West" style="width:100px;">
+
+
+			<div class="easyui-panel" style="padding:5px">
+		        <ul class="easyui-tree" data-options="url:'tree_data1.json',method:'get',animate:true"></ul>
+		    </div>
+
+
+
+
+
+
+		</div>
+		<div data-options="region:'center',title:'Main Title',iconCls:'icon-ok'">
+
+			<table id="dg" style="width:710px;"></table>
+			<div id="dlg" class="easyui-dialog" title="Basic Dialog" data-options="iconCls:'icon-save',closed:true" style="width:800px;height:600px;padding:10px">
+
+		        <form id="ff" class="easyui-form" method="post" data-options="novalidate:true">
+		            <div style="margin-bottom:20px">
+		                <input class="easyui-textbox" id="name" name="name" style="width:100%" data-options="label:'Name:',required:true">
+		            </div>
+		            <div style="margin-bottom:20px">
+		                <input class="easyui-textbox" id="email" name="email" style="width:100%" data-options="label:'Email:',required:true,validType:'email'">
+		            </div>
+		            <div style="margin-bottom:20px">
+		                <input class="easyui-textbox" id="subject" name="subject" style="width:100%" data-options="label:'Subject:',required:true">
+		            </div>
+		            <div style="margin-bottom:20px">
+		                <input class="easyui-textbox" id="message" name="message" style="width:100%;height:60px" data-options="label:'Message:',multiline:true">
+		            </div>
+		            <div style="margin-bottom:20px">
+		                <select class="easyui-combobox" name="language" label="Language" style="width:100%"><option value="ar">Arabic</option><option value="bg">Bulgarian</option><option value="ca">Catalan</option><option value="zh-cht">Chinese Traditional</option><option value="cs">Czech</option><option value="da">Danish</option><option value="nl">Dutch</option><option value="en" selected="selected">English</option><option value="et">Estonian</option><option value="fi">Finnish</option><option value="fr">French</option><option value="de">German</option><option value="el">Greek</option><option value="ht">Haitian Creole</option><option value="he">Hebrew</option><option value="hi">Hindi</option><option value="mww">Hmong Daw</option><option value="hu">Hungarian</option><option value="id">Indonesian</option><option value="it">Italian</option><option value="ja">Japanese</option><option value="ko">Korean</option><option value="lv">Latvian</option><option value="lt">Lithuanian</option><option value="no">Norwegian</option><option value="fa">Persian</option><option value="pl">Polish</option><option value="pt">Portuguese</option><option value="ro">Romanian</option><option value="ru">Russian</option><option value="sk">Slovak</option><option value="sl">Slovenian</option><option value="es">Spanish</option><option value="sv">Swedish</option><option value="th">Thai</option><option value="tr">Turkish</option><option value="uk">Ukrainian</option><option value="vi">Vietnamese</option></select>
+		            </div>
+		        </form>
+		        <div style="text-align:center;padding:5px 0">
+		            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="submitForm()" style="width:80px">Submit</a>
+		            <a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()" style="width:80px">Clear</a>
+		        </div>
+
+
+		    </div>
+
+		</div>
+	</div>
+	<script>
+
+
+		function submitForm(){
+            $('#ff').form('submit',{
+                onSubmit:function(){
+                	$('#dlg').dialog('close');
+                    if($(this).form('enableValidation').form('validate')){
+                    	console.log($('#ff').serializeJSON());
+                    }else{
+                    	$.messager.show({
+			                title:'信息提示',
+			                msg:'请检查表单项，确保无误！',
+			                showType:'show'
+			            });
+                    };
+                }
+            });
+        }
+        function clearForm(){
+            $('#ff').form('clear');
+        }
+		var toolbar = [{
+            text:'Add',
+            iconCls:'icon-add',
+            handler:function(){
+            	$('#dlg').dialog('open');
+            	$('#ff').form('load', 'form.json');
+            }
+        },{
+            text:'Cut',
+            iconCls:'icon-cut',
+            handler:function(){
+
+            }
+        },'-',{
+            text:'Save',
+            iconCls:'icon-save',
+            handler:function(){alert('save')}
+        }];
+		$('#dg').datagrid({
+		    url:'datagrid_data1.json',
+		    method:'get',
+		    toolbar:toolbar,
+		    columns:[[
+		        {field:'productid',title:'产品编号',width:100},
+		        {field:'productname',title:'产品名称',width:100},
+		        {field:'unitcost',title:'产品单价',width:100,align:'right'},
+		        {field:'status',title:'产品状态',width:100,align:'right'},
+		        {field:'listprice',title:'列表价格',width:100,align:'right'},
+		        {field:'attr1',title:'所属类别',width:160,align:'right'}
+		    ]]
+		});
+	</script>
+</body>
+</html>
